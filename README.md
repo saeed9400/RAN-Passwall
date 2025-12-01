@@ -1,4 +1,4 @@
-# 🚀 Easy-IRAN-Passwall
+### 🚀 Easy-IRAN-Passwall
 
 ## ● توضیحات:
 این اسکریپت **PassWall2 را به راحتی و کامل روی OpenWrt نصب می‌کند**  
@@ -22,6 +22,9 @@
 - دسترسی SSH با سطح root
 
 ## ● نصب سریع
-1. وارد ترمینال SSH شوید:  
+# 1. وارد ترمینال SSH شوید:  
    ```bash
    ssh root@192.168.1.1
+# 2.   سپس دستور زیر را برای دانلود و اجرای اسکریپت اجرا کنید:
+   ```bash
+rm -f Passwall-IR.sh && wget https://raw.githubusercontent.com/saeed9400/Easy-IRAN-Passwall/main/Passwall-IR.sh && chmod +x Passwall-IR.sh && sh Passwall-IR.sh

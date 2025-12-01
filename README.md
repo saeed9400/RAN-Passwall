@@ -1,4 +1,4 @@
-# 🚀 Easy-IRAN-Passwall.
+# 🚀 Easy Passwall. (IRAN edition...)
 
 
 ## ● توضیحات:

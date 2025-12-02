@@ -2,7 +2,7 @@
 
 <br>
 
-<a href="https://saeed9400.github.io/IRAN_Passwall2/">► Web Page ◄ </a>
+
 <br>
 <br>
 
@@ -89,6 +89,9 @@ switch to OpenWrt.
 
 --------------------------------------------
 
+<br>
+
+<a href="https://saeed9400.github.io/IRAN_Passwall2/">► Web Page ◄ </a>
 <br>
 
 -   <a href="https://github.com/saeed9400/IRAN_Passwall2/blob/main/README.md">◄ راهنما فارسی ► </a>

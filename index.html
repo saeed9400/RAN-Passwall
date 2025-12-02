@@ -5,107 +5,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Easy IRAN PassWall2 Installer – OpenWrt Automated Setup</title>
 
-<!-- Google Verification -->
 <meta name="google-site-verification" content="pqR9dWrVE6R9z2jFYhaciJE1NzOSar5ZJboKnsnvR34" />
-
-<!-- SEO -->
 <meta name="description" content="اسکریپت نصب خودکار PassWall2 برای OpenWrt با تفکیک ترافیک ایران، پایگاه داده GeoIP، تنظیمات هوشمند و نصب سریع.">
 <meta name="keywords" content="OpenWrt, PassWall2, Iran Routing, Traffic Split, VPN, GeoIP, Auto Installer, Shunt">
 
 <style>
-    body {
-        font-family: "Segoe UI", Tahoma, sans-serif;
-        margin: 0;
-        padding: 0;
-        background: #f0f2f5;
-        color: #222;
-        direction: rtl;
-        text-align: right;
-        line-height: 1.9;
-    }
-
-    header {
-        background: #0d6efd;
-        padding: 30px;
-        color: white;
-        text-align: center;
-        font-size: 28px;
-        font-weight: bold;
-    }
-
-    .top-desc {
-        text-align: center;
-        font-size: 16px;
-        margin-top: 10px;
-        color: #444;
-        direction: ltr;
-    }
-
-    .container {
-        max-width: 1100px;
-        margin: 25px auto;
-        background: white;
-        padding: 35px;
-        border-radius: 18px;
-        box-shadow: 0 5px 20px rgba(0,0,0,0.12);
-    }
-
-    h2 {
-        color: #0d6efd;
-        margin-top: 35px;
-    }
-
-    code {
-        background: #eee;
-        padding: 12px;
-        border-radius: 8px;
-        display: block;
-        direction: ltr;
-        white-space: pre-wrap;
-        margin-top: 10px;
-        text-align: left;
-    }
-
-    ul {
-        padding-right: 20px;
-    }
-
-    .section {
-        margin-top: 40px;
-    }
-
-    .divider {
-        width: 100%;
-        height: 2px;
-        background: #ddd;
-        margin: 45px 0;
-    }
-
-    .center {
-        text-align: center;
-        direction: rtl;
-    }
-
-    img {
-        width: 100%;
-        border-radius: 14px;
-        margin: 20px 0;
-    }
-
-    a {
-        color: #0d6efd;
-        font-weight: bold;
-        text-decoration: none;
-    }
-
-    .footer {
-        text-align: center;
-        padding: 25px;
-        background: #222;
-        color: white;
-        margin-top: 60px;
-        font-size: 14px;
-    }
+    body { font-family: "Segoe UI", Tahoma, sans-serif; margin: 0; padding: 0; background: #f0f2f5; color: #222; direction: rtl; text-align: right; line-height: 1.9; }
+    header { background: #0d6efd; padding: 30px; color: white; text-align: center; font-size: 28px; font-weight: bold; }
+    .top-desc { text-align: center; font-size: 16px; margin-top: 10px; color: #444; direction: ltr; }
+    .container { max-width: 1100px; margin: 25px auto; background: white; padding: 35px; border-radius: 18px; box-shadow: 0 5px 20px rgba(0,0,0,0.12); }
+    h2 { color: #0d6efd; margin-top: 35px; }
+    code { background: #eee; padding: 12px; border-radius: 8px; display: block; direction: ltr; white-space: pre-wrap; margin-top: 10px; text-align: left; }
+    ul { padding-right: 20px; }
+    .section { margin-top: 40px; }
+    .divider { width: 100%; height: 2px; background: #ddd; margin: 45px 0; }
+    .center { text-align: center; direction: rtl; }
+    img { width: 100%; border-radius: 14px; margin: 20px 0; }
+    a { color: #0d6efd; font-weight: bold; text-decoration: none; }
+    .footer { text-align: center; padding: 25px; background: #222; color: white; margin-top: 60px; font-size: 14px; }
+    .code-container { position: relative; margin-top: 15px; }
+    .copy-btn { position: absolute; top: 5px; right: 5px; padding: 5px 12px; background: #0d6efd; color: white; border: none; border-radius: 5px; cursor: pointer; }
 </style>
 </head>
 
@@ -155,26 +74,36 @@
     <div class="divider"></div>
 
     <div class="section">
-        <h2>● نصب سریع (یک فرمان)</h2>
-
-        <code>
-rm -f Passwall-IR.sh && wget https://raw.githubusercontent.com/saeed9400/IRAN_Passwall2/main/Passwall-IR.sh && chmod +x Passwall-IR.sh && sh Passwall-IR.sh
-        </code>
+        <h2>📥 نصب سریع (یک فرمان)</h2>
+        <p>برای نصب سریع، روی دکمه <strong>Copy</strong> کلیک کنید و سپس در ترمینال پیست و اجرا کنید:</p>
+        <div class="code-container">
+            <pre id="cmd1">rm -f Passwall-IR.sh && wget https://raw.githubusercontent.com/saeed9400/IRAN_Passwall2/main/Passwall-IR.sh && chmod +x Passwall-IR.sh && sh Passwall-IR.sh</pre>
+            <button class="copy-btn" onclick="copyText('cmd1')">Copy</button>
+        </div>
     </div>
 
     <div class="divider"></div>
 
     <div class="section">
-        <h2>● نصب دستی</h2>
+        <h2>📥 نصب دستی</h2>
 
         <p>1. اتصال به SSH:</p>
-        <code>ssh root@192.168.1.1</code>
+        <div class="code-container">
+            <pre id="cmd2">ssh root@192.168.1.1</pre>
+            <button class="copy-btn" onclick="copyText('cmd2')">Copy</button>
+        </div>
 
         <p>2. دانلود اسکریپت:</p>
-        <code>wget https://raw.githubusercontent.com/saeed9400/IRAN_Passwall2/main/Passwall-IR.sh -O Passwall-IR.sh</code>
+        <div class="code-container">
+            <pre id="cmd3">wget https://raw.githubusercontent.com/saeed9400/IRAN_Passwall2/main/Passwall-IR.sh -O Passwall-IR.sh</pre>
+            <button class="copy-btn" onclick="copyText('cmd3')">Copy</button>
+        </div>
 
         <p>3. اجرا:</p>
-        <code>chmod +x Passwall-IR.sh && ./Passwall-IR.sh</code>
+        <div class="code-container">
+            <pre id="cmd4">chmod +x Passwall-IR.sh && ./Passwall-IR.sh</pre>
+            <button class="copy-btn" onclick="copyText('cmd4')">Copy</button>
+        </div>
     </div>
 
     <div class="divider"></div>
@@ -186,6 +115,17 @@ rm -f Passwall-IR.sh && wget https://raw.githubusercontent.com/saeed9400/IRAN_Pa
 <div class="footer">
 ساخته شده توسط Saeed • GitHub Pages • IRAN_Passwall2
 </div>
+
+<script>
+function copyText(id) {
+    const text = document.getElementById(id).innerText;
+    navigator.clipboard.writeText(text).then(() => {
+        alert("دستور کپی شد! ✅\nوارد ترمینال SSH شوید\nبا راست کلیک Paste کنید\nسپس Enter بزنید");
+    }).catch(() => {
+        alert("خطا در کپی کردن متن! ❌");
+    });
+}
+</script>
 
 </body>
 </html>
